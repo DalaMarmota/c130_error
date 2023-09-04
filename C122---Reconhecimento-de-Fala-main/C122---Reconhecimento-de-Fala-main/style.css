@@ -1,0 +1,56 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items: center;
+    height:100vh;
+    background:linear-gradient(90deg, #000 0%, #d00ab2 100% );
+}
+h3{
+    color:white;
+    font-family:'Fasthand', cursive;
+    font-size:70px;
+    margin-top:20px;
+    position:relative;
+}
+h3:after{
+    content:"voz";
+    display:inline-block;
+    animation:scrollAnimation 2s linear infinite;
+    position: absolute;
+    top:50%;
+    left:100%;
+    transform:translateX(-50%);
+}
+h3:hover:after{
+    animation-play-state: paused;
+}
+@keyframes scrollAnimation{
+    0%{
+        transform: translateX(20%);
+    }
+    100%{
+        transform:translateY(-70%);
+    }
+}
+button{
+    font-family:'Fasthand', cursive;
+    border-color:rgb(255, 0, 0);
+    font-size:25px;
+    color: #ffffff;
+    box-shadow:0 0 10px 0 #f473c9 inset, 0 0 10px 4px #4fff;
+    background-color: rgb(255, 190, 100);
+}
+button:hover{
+    box-shadow:0 0 10px #f473c9 inset, 0 0 10px 4 px #4fff;
+
+}
+canvas{
+    background-color:black;
+    border-radius:20px;
+    
+}
